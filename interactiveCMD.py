@@ -95,7 +95,7 @@ def createInteractive(photfile, mag = 'G', color1 = 'G_BP', color2 = 'G_RP', xrn
 	# widgets
 
 	# add a slider to define the width of the selection, next to the line
-	slider = Slider(start = 0, end = 0.1, value = 0.01, step = 0.001, title = "Selection Region")
+	slider = Slider(start = 0, end = 0.1, value = 0.01, step = 0.001, format = '0.000', title = "Selection Region")
 	def sliderCallback(attr, old, new):
 		updateStatus(attr, old, new)
 	slider.on_change("value", sliderCallback)
