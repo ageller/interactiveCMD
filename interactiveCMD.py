@@ -1,13 +1,32 @@
 from bokeh.plotting import figure
-from bokeh.models import ColumnDataSource, Column
+from bokeh.models import ColumnDataSource
+from bokeh.layouts import column
 from bokeh.io import curdoc
 from bokeh.events import DoubleTap
 
 import pandas as pd
+import sys
 
 coordList = []
 
 def createInteractive(photfile, mag = 'G', color1 = 'G_BP', color2 = 'G_RP', xrng = [0.5,2], yrng = [20,10]):
+	'''
+	To run this in a Jupyter notebook:
+
+	---------------------
+	layout = createInteractive('filename.phot')
+
+	def bkapp(doc):
+		doc.add_root(layout)
+
+	show(bkapp)
+	--------------------
+
+	To run this from command line (I have only built in a hook for the file argument, but others could be added easily):
+
+	$ bokeh serve --show interactiveCMD.py --args filename.phot
+
+	'''
 
 	# create the initial figure
 	TOOLS = "tap"
@@ -38,7 +57,11 @@ def createInteractive(photfile, mag = 'G', color1 = 'G_BP', color2 = 'G_RP', xrn
 	p.on_event(DoubleTap, callback)
 
 	# One single plot for the layout
-	layout = Column(p)
+	layout = column(p)
 
 	return(layout)
 
+
+# only needed if running in terminal
+layout = createInteractive(sys.argv[1])
+curdoc().add_root(layout)
