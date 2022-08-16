@@ -106,7 +106,7 @@ def createInteractive(photfile, mag = 'G', color1 = 'G_BP', color2 = 'G_RP', xrn
 	def resetCallback(event):
 		newPoints.data = dict(x = [], y = [])
 		slider.value = 0.1  
-		sourcePhot['status'] = ['unselected']*len(tbl)
+		tbl['useDBI'] = [0]*len(tbl)
 
 	resetButton.on_click(resetCallback)
 
