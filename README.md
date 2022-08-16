@@ -16,5 +16,5 @@ To run this from command line (I have only built in a hook for the file argument
 IMPORTANT: first, uncomment the two lines at the bottom of this script.  Then:
 
 ```
-$ bokeh serve --show interactiveCMD.py --args filename.phot
+bokeh serve --show interactiveCMD.py --args filename.phot
 ```
