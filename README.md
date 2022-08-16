@@ -1,5 +1,5 @@
-# interactive CMD
-Testing an interactive viewer for a CMD where the user can draw a line to define the blue edge (like an isochrone).  The user can double click on a CMD to define points along a curve meant to follow the single-star sequence.  After doing so, the user can apply a selection to define the likely single members of the cluster.
+# Interactive CMD
+Testing an interactive plotting tool for a CMD where the user can double click on a CMD to define points along a curve meant to follow the single-star sequence.  After doing so, the user can apply a selection to define the likely single members of the cluster.
 
 To run this in a Jupyter notebook (intended purpose):
 
