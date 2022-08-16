@@ -12,7 +12,10 @@ def bkapp(doc):
 show(bkapp)
 ```
 
-To run this from command line (I have only built in a hook for the file argument, but others could be added easily):
+To run this from command line:
+
+Note: I have only built in a hook for the file argument, but others could be added easily.
+
 IMPORTANT: first, uncomment the two lines at the bottom of this script.  Then:
 
 ```
